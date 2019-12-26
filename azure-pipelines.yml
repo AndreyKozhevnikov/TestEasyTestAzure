@@ -54,6 +54,6 @@ steps:
 - task: PublishPipelineArtifact@1
   condition: succeededOrFailed()
   inputs:
-    targetPath: '.\EasyTests\'
+    targetPath: '.\easytest\Bin'
     artifact: 'TestsResultFiles'
     publishLocation: 'pipeline'
