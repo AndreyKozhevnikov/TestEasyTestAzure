@@ -5,7 +5,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'NonXAFSecurityExamples.sln'
+  solution: 'dxT844058v1.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'EasyTest'
 
