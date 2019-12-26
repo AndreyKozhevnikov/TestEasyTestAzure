@@ -28,7 +28,7 @@ steps:
     command: 'restore'
     restoreSolution: '$(solution)'
     feedsToUse: 'config'
-    nugetConfigPath: '$(nugetConf.secureFilePath)'
+    nugetConfigPath: 'Nuget.config'
 
 - task: VSBuild@1
   inputs:
@@ -42,8 +42,8 @@ steps:
     targetType: 'inline'
     script: |     
       $easyTestPath=".\dxT844058v1.Module\FunctionalTests\"
-      $easyTestBinPath=".\EasyTestBin"
-      $WinBinPath=".\XafSolution\XafSolution.Win\bin\EasyTest"
+      $easyTestBinPath=".\dxT844058v1.Win\bin\Debug\"
+      $WinBinPath=".\EasyTest"
       
       
       sqllocaldb start MSSQLLocalDB
