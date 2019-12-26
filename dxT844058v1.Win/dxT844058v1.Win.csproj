@@ -196,6 +196,9 @@
     <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.ExpressApp.ViewVariantsModule.19.2.5\lib\net452\DevExpress.ExpressApp.ViewVariantsModule.v19.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.ExpressApp.Web.19.2.5\lib\net452\DevExpress.ExpressApp.Web.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.ExpressApp.Win.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.ExpressApp.Win.19.2.5\lib\net452\DevExpress.ExpressApp.Win.v19.2.dll</HintPath>
     </Reference>
@@ -241,6 +244,9 @@
     <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Sparkline.Core.19.2.5\lib\net452\DevExpress.Sparkline.v19.2.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.SpellChecker.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.SpellChecker.Core.19.2.5\lib\net452\DevExpress.SpellChecker.v19.2.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Spreadsheet.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Spreadsheet.Core.19.2.5\lib\net452\DevExpress.Spreadsheet.v19.2.Core.dll</HintPath>
     </Reference>
@@ -252,6 +258,33 @@
     </Reference>
     <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Utils.UI.19.2.5\lib\net452\DevExpress.Utils.v19.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxDiagram.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxDiagram.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGantt.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxGantt.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxHtmlEditor.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxPivotGrid.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxSpellChecker.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.Themes.19.2.5\lib\net452\DevExpress.Web.ASPxThemes.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.ASPxTreeList.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.Resources.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Web.19.2.5\lib\net452\DevExpress.Web.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Workflow.Activities.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.ExpressApp.Workflow.19.2.5\lib\net452\DevExpress.Workflow.Activities.v19.2.dll</HintPath>
