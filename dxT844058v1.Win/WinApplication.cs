@@ -1,12 +1,7 @@
 using System;
-using System.ComponentModel;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win;
-using System.Collections.Generic;
-using DevExpress.ExpressApp.Updating;
 using DevExpress.ExpressApp.Xpo;
-using DevExpress.ExpressApp.Security;
-using DevExpress.ExpressApp.Security.ClientServer;
 
 namespace dxT844058v1.Win {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/DevExpressExpressAppWinWinApplicationMembersTopicAll.aspx
