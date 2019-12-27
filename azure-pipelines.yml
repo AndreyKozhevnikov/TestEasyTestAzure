@@ -19,7 +19,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(dx_nuget)"'
+    script: 'Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(DX_NUGET)"'
 
 - task: NuGetCommand@2
   inputs:
