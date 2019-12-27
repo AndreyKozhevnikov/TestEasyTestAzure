@@ -14,21 +14,22 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-steps:
 
+steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: |
-      #PowerShell
-      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(dx_nuget)"
+    script: 'Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(DX_NUGET)"'
+
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
     restoreSolution: '$(solution)'
     feedsToUse: 'config'
     nugetConfigPath: 'nuget.config'
-- task: NuGetToolInstaller@1      
+      
+- task: NuGetToolInstaller@1
+
 
 - task: VSBuild@1
   inputs:
@@ -47,10 +48,10 @@ steps:
     script: |
       $easyTestPath="dxT844058v1.Module\FunctionalTests\"
       sqllocaldb start MSSQLLocalDB
-      Nuget install DevExpress.EasyTest.TestExecutor -OutputDirectory EasyTest -configfile NuGet.config      
-      New-Item -ItemType directory -Path "EasyTest\Bin\"
-      Get-ChildItem -Path "EasyTest\*" -Include *.dll,*.exe -Recurse | Where {$_.FullName -notlike "*\netstandard*\*"} | Copy-Item -Destination "EasyTest\Bin\"
-      Copy-Item "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll" -Destination "EasyTest\Bin\"
-      EasyTest\Bin\TestExecutor.v19.2.exe $easyTestPath
+      Nuget install DevExpress.EasyTest.TestExecutor -OutputDirectory Easytest -configfile NuGet.config      
+      New-Item -ItemType directory -Path "Easytest\Bin\"
+      Get-ChildItem -Path "Easytest\*" -Include *.dll,*.exe -Recurse | Where {$_.FullName -notlike "*\netstandard*\*"} | Copy-Item -Destination "EasyTest\Bin\" -Force
+      Copy-Item "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll" -Destination "EasyTest\Bin\" -Force
+      Easytest\Bin\TestExecutor.v19.2.exe $easyTestPath
       Get-Content -Path $easyTestPath\TestsLog.xml
       if(Select-String -Pattern 'Result="Failed"', 'Result="Warning"' -Path $easyTestPath\TestsLog.xml) { exit 1 }
