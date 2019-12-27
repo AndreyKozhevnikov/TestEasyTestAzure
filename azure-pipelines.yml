@@ -21,7 +21,7 @@ steps:
     targetType: 'inline'
     script: |
       #PowerShell
-      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(dx_nuget)"
+      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(DX_NUGET)"
 
       
 - task: NuGetToolInstaller@1
