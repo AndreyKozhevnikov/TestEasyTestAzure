@@ -21,7 +21,7 @@ steps:
     targetType: 'inline'
     script: |
       #PowerShell
-      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(DX_NUGET)"
+      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(dx_nuget)"
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
