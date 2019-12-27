@@ -14,7 +14,16 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
+
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      #PowerShell
+      Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(dx_nuget)"
+
+      
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
