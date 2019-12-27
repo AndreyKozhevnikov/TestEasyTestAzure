@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'dxT844058v1.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
