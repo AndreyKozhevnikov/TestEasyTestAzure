@@ -15,16 +15,20 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
       #PowerShell
       Write-Host "##vso[task.setvariable variable=DX_NUGET_PUB;]$(DX_NUGET)"
+- task: NuGetToolInstaller@1      
 - task: NuGetCommand@2
   inputs:
+    command: 'restore'
     restoreSolution: '$(solution)'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
 
 - task: VSBuild@1
   inputs:
