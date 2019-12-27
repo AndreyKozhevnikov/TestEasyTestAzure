@@ -41,20 +41,19 @@ steps:
   inputs:
     targetType: 'inline'
     script: |     
-      $easyTestPath="dxT844058v1.Module\FunctionalTests\"
-      $easyTestPathBin=$easyTestPath+"\Bin\"
+      $easyTestPath=".\dxT844058v1.Module\FunctionalTests\" 
       sqllocaldb start MSSQLLocalDB
-      Nuget install DevExpress.EasyTest.TestExecutor -OutputDirectory $easyTestPath -configfile NuGet.config      
-      New-Item -ItemType directory -Path $easyTestPathBin
-      Get-ChildItem -Path $easyTestPath\* -Include *.dll,*.exe -Recurse | Where {$_.FullName -notlike "*\netstandard*\*"} | Copy-Item -Destination $easyTestPathBin
-      Copy-Item "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll" -Destination $easyTestPathBin
-      & $easyTestPathBin\TestExecutor.v19.2.exe $easyTestPath
+      Nuget install DevExpress.EasyTest.TestExecutor -OutputDirectory Easytest -configfile NuGet.config      
+      New-Item -ItemType directory -Path "Easytest\Bin\"
+      Get-ChildItem -Path "Easytest\*" -Include *.dll,*.exe -Recurse | Where {$_.FullName -notlike "*\netstandard*\*"} | Copy-Item -Destination "EasyTest\Bin\" -Force
+      Copy-Item "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll" -Destination "EasyTest\Bin\" -Force
+      Easytest\Bin\TestExecutor.v19.2.exe $easyTestPath
       Get-Content -Path $easyTestPath\TestsLog.xml
       if(Select-String -Pattern 'Result="Failed"', 'Result="Warning"' -Path $easyTestPath\TestsLog.xml) { exit 1 }
 
 - task: PublishPipelineArtifact@1
   condition: succeededOrFailed()
   inputs:
-    targetPath: 'dxT844058v1.Module\FunctionalTests\Bin\'
+    targetPath: '.\easytest\Bin'
     artifact: 'TestsResultFiles'
     publishLocation: 'pipeline'
