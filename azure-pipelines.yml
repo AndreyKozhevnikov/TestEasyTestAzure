@@ -48,7 +48,7 @@ steps:
       New-Item -ItemType directory -Path $easyTestPathBin
       Get-ChildItem -Path $easyTestPath\* -Include *.dll,*.exe -Recurse | Where {$_.FullName -notlike "*\netstandard*\*"} | Copy-Item -Destination $easyTestPathBin
       Copy-Item "C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll" -Destination $easyTestPathBin
-      $easyTestPathBin\TestExecutor.v19.2.exe $easyTestPath
+      & $easyTestPathBin\TestExecutor.v19.2.exe $easyTestPath
       Get-Content -Path $easyTestPath\TestsLog.xml
       if(Select-String -Pattern 'Result="Failed"', 'Result="Warning"' -Path $easyTestPath\TestsLog.xml) { exit 1 }
 
